@@ -1,0 +1,20 @@
+{
+  "name": "ubif-homework",
+  "version": "1.0.0",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austinemayer/UBIF-Homework.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/austinemayer/UBIF-Homework/issues"
+  },
+  "homepage": "https://github.com/austinemayer/UBIF-Homework#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.0.3",
+  }
+}
