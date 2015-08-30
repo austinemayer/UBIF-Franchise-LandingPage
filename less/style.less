@@ -27,8 +27,8 @@
 }
 
 body{
-	background-color: @background-white !important;
-	.font-style(16,400,@font-grey);
+	background-color: @font-white !important;
+	.font-style(14,400,@font-grey);
 
 	.row{
 		margin:20px 0;
@@ -47,17 +47,19 @@ body{
 			.font-style(32,300,@ubif-red);
 
 			& + p{
-				
+				margin: 0 0 40px 0;
 			}
 		}
 	}
 
-	.container-fluid.thesis-section{
+	.thesis-section{
 		background-color: @ubif-red;
+		height: 220px;
+		z-index: 1;
 
 		.col-md-10{
 			color:@font-white;
-			padding:4% 0 7% 13%;
+			padding:25px 0 45px 13%;
 
 			h3{
 				.font-style(30,300,@font-white);
@@ -69,23 +71,89 @@ body{
 		}
 	}
 
-	.container-fluid.numbers-section{
-		
+	.numbers-section{
+		background-color: @background-white;
+		height: 220px;
+
 		.col-md-10{
-			padding:4%;
+			padding:18px 0 24px 0;
+
+			h3{
+				.font-style(38,800,@font-grey);
+			}
+
+			h2{
+				.font-style(48,800,@ubif-red);
+				line-height: 100% !important;
+				margin-bottom: 0;
+			}
+
+			small{
+				.font-style(12,400,@font-grey);	
+			}
 		}
 
 		.broken-phone{
 			position: absolute;
-			z-index: -1;
-			right: 107%;
-			width: 35%;
+			right: 105%;
+			width: 26%;
 		}
-
 	}
 
+	.container-fluid{
+		padding: 0;
 
+		.phone-users{
+			background-color: @font-white;
+			padding: 20px 0;
 
+			small{
+				color: @info-grey;
+			}
+		}
 
+		.contact-form{
+			background: linear-gradient(
+		      rgba(0, 0, 0, 0.65), 
+		      rgba(0, 0, 0, 0.65)
+    		), url(../assets/images/store.jpg) no-repeat center -180px fixed;
 
+			h3{
+				.font-style(30,300,@background-white);
+				margin: 35px 0 35px 0;
+			}
+
+			form{
+				background-color: @background-white;
+				padding: 30px 10px;
+				margin: 0 0 100px 0;
+
+				.col-md-12,.col-md-6{
+					margin: 0 0 20px 0;
+				}
+
+				button{
+					background-color: @ubif-red;
+					color: @font-white;
+					margin: 0 15px;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.footer{
+		background-color: @footer-black;
+		height: auto;
+		padding: 10px 0;
+
+		.footer-info{
+			.font-style(14,400,@info-grey);
+			padding: 20px 0;
+		}
+
+		.footer-disclaimer{
+			.font-style(12,400,@disclaimer-grey);
+		}
+	}
 }

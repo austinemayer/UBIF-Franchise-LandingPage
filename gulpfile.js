@@ -16,7 +16,7 @@ gulp.task('lint', function() {
 gulp.task('less', function(){
     return gulp.src('less/style.less')
         .pipe(less())
-        .pipe(autoprefixer('last 2 versions'))
+        .pipe(autoprefixer('last 3 versions'))
         .pipe(gulp.dest('css/'));
 });
 
