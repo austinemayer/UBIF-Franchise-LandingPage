@@ -1,11 +1,50 @@
-.box {
-  color: #fe33ac;
-  background-color: #fe33ac;
-  border-color: #fdcdea;
-  -webkit-transform: scale(0.5);
-      -ms-transform: scale(0.5);
-          transform: scale(0.5);
+/*----------Color Variables----------*/
+/*----------Mixins----------*/
+/*----------Element Styles----------*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+* {
+  border-radius: 0 !important;
 }
-.box div {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+body {
+  background-color: #eeeeee !important;
+  font: 400 16px/150% 'Open Sans', Helvetica, sans-serif !important;
+  color: #363636 !important;
+}
+body .row {
+  margin: 20px 0;
+}
+body .row .ubif-logo {
+  height: 28px;
+}
+body .row .request-info {
+  background-color: #da291c;
+  color: #ffffff;
+  max-width: 110px;
+}
+body .row .cta-title {
+  font: 300 32px/150% 'Open Sans', Helvetica, sans-serif !important;
+  color: #da291c !important;
+}
+body .container-fluid.thesis-section {
+  background-color: #da291c;
+}
+body .container-fluid.thesis-section .col-md-10 {
+  color: #ffffff;
+  padding: 4% 0 7% 13%;
+}
+body .container-fluid.thesis-section .col-md-10 h3 {
+  font: 300 30px/150% 'Open Sans', Helvetica, sans-serif !important;
+  color: #ffffff !important;
+}
+body .container-fluid.thesis-section .col-md-10 p {
+  padding: 0 13% 0 0;
+}
+body .container-fluid.numbers-section .col-md-10 {
+  padding: 4%;
+}
+body .container-fluid.numbers-section .broken-phone {
+  position: absolute;
+  z-index: -1;
+  right: 107%;
+  width: 35%;
 }

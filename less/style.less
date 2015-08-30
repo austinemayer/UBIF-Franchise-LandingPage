@@ -1,15 +1,91 @@
-@base: #f938ab;
 
-.box-shadow(@style, @c) when (iscolor(@c)) {
-  box-shadow:         @style @c;
+/*----------Color Variables----------*/
+
+@ubif-red: #da291c;
+@font-grey: #363636;
+@font-white: #ffffff;
+@background-white: #eeeeee;
+@disclaimer-grey: #464646;
+@info-grey: #898989;
+@footer-black: #000000;
+
+/*----------Mixins----------*/
+
+.font-style(@size,@weight,@color){
+
+  	font: @weight unit(@size, px)/150% 'Open Sans', Helvetica, sans-serif !important;
+  	color: @color !important;
+
 }
-.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+
+/*----------Element Styles----------*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+* {
+  border-radius: 0 !important;
 }
-.box {
-  color: saturate(@base, 5%);
-  background-color: saturate(@base, 5%);
-  border-color: lighten(@base, 30%);
-  div { .box-shadow(0 0 5px, 30%) }
-  transform: scale(.5);
+
+body{
+	background-color: @background-white !important;
+	.font-style(16,400,@font-grey);
+
+	.row{
+		margin:20px 0;
+
+		.ubif-logo{
+			height: 28px;
+		}
+
+		.request-info{
+			background-color: @ubif-red;
+			color: @font-white;
+			max-width: 110px;
+		}
+
+		.cta-title{
+			.font-style(32,300,@ubif-red);
+
+			& + p{
+				
+			}
+		}
+	}
+
+	.container-fluid.thesis-section{
+		background-color: @ubif-red;
+
+		.col-md-10{
+			color:@font-white;
+			padding:4% 0 7% 13%;
+
+			h3{
+				.font-style(30,300,@font-white);
+			}
+
+			p{
+				padding:0 13% 0 0;
+			}
+		}
+	}
+
+	.container-fluid.numbers-section{
+		
+		.col-md-10{
+			padding:4%;
+		}
+
+		.broken-phone{
+			position: absolute;
+			z-index: -1;
+			right: 107%;
+			width: 35%;
+		}
+
+	}
+
+
+
+
+
 }
