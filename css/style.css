@@ -170,6 +170,10 @@ body .container-fluid .contact-form form .form-submit button {
   color: #ffffff;
   width: 100%;
 }
+body .container-fluid .contact-form form .form-submit button:focus {
+  border-color: transparent;
+  outline: none;
+}
 body .container-fluid .contact-form .post-submit {
   -webkit-transform: translateY(120%);
       -ms-transform: translateY(120%);
