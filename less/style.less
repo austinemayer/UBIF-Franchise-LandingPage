@@ -10,7 +10,8 @@
 @footer-black: #000000;
 
 
-/*----------Bootstrap Media Queries ----------*/
+/*----------Bootstrap Media Query Values ----------*/
+
 @col-xs: 768px;
 @col-sm: 992px;
 @col-md: 1200px;
@@ -35,6 +36,8 @@
 body{
 	background-color: @font-white !important;
 	.font-style(14,400,@font-grey);
+
+	/*----------Call to Action & Nav Bar----------*/
 
 	.row{
 		margin:20px 0;
@@ -83,6 +86,8 @@ body{
 			}
 		}
 	}
+
+	/*----------Thesis & Numbers Row----------*/
 
 	.thesis-section{
 		background-color: @ubif-red;
@@ -143,6 +148,8 @@ body{
 		}
 	}
 
+	/*----------Smartphone Statistic & Contact Form----------*/
+
 	.container-fluid{
 		padding: 0;
 
@@ -162,6 +169,12 @@ body{
 		      rgba(0, 0, 0, 0.65)
     		), url(../assets/images/store.jpg) no-repeat center -180px fixed;
     		padding: 35px 0 100px 0;
+    		height: 741px;
+
+
+    		@media (max-width: @col-xs) {
+					height: auto;
+			}
 
 			h3{
 				.font-style(30,300,@background-white);
@@ -196,6 +209,13 @@ body{
 			}
 
 			.post-submit{
+				transform: translateY(120%);
+
+				@media (max-width: @col-xs) {
+					padding: 40px 0 3px 0;
+					top: none;
+					transform: none;
+				}
 
 				h3{
 					.font-style(30,300,@background-white);
@@ -225,6 +245,8 @@ body{
 		}
 	}
 
+	/*----------Footer----------*/
+
 	footer{
 		background-color: @footer-black;
 		height: auto;
@@ -233,6 +255,11 @@ body{
 		.footer-info{
 			.font-style(14,400,@info-grey);
 			padding: 20px 0;
+
+			@media (max-width: @col-xs) {
+				font-size: 10px !important;
+				padding: 10px 0;
+			}
 
 			a{
 				margin:0 10px 0 0;

@@ -1,5 +1,5 @@
 /*----------Color Variables----------*/
-/*----------Bootstrap Media Queries ----------*/
+/*----------Bootstrap Media Query Values ----------*/
 /*----------Mixins----------*/
 /*----------Element Styles----------*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
@@ -10,6 +10,10 @@ body {
   background-color: #ffffff !important;
   font: 400 14px/150% 'Open Sans', Helvetica, sans-serif !important;
   color: #363636 !important;
+  /*----------Call to Action & Nav Bar----------*/
+  /*----------Thesis & Numbers Row----------*/
+  /*----------Smartphone Statistic & Contact Form----------*/
+  /*----------Footer----------*/
 }
 body .row {
   margin: 20px 0;
@@ -128,6 +132,12 @@ body .container-fluid .contact-form {
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/images/store.jpg) no-repeat center -180px fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/images/store.jpg) no-repeat center -180px fixed;
   padding: 35px 0 100px 0;
+  height: 741px;
+}
+@media (max-width: 768px) {
+  body .container-fluid .contact-form {
+    height: auto;
+  }
 }
 body .container-fluid .contact-form h3 {
   font: 300 30px/150% 'Open Sans', Helvetica, sans-serif !important;
@@ -159,6 +169,20 @@ body .container-fluid .contact-form form .form-submit button {
   background-color: #da291c;
   color: #ffffff;
   width: 100%;
+}
+body .container-fluid .contact-form .post-submit {
+  -webkit-transform: translateY(120%);
+      -ms-transform: translateY(120%);
+          transform: translateY(120%);
+}
+@media (max-width: 768px) {
+  body .container-fluid .contact-form .post-submit {
+    padding: 40px 0 3px 0;
+    top: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
 }
 body .container-fluid .contact-form .post-submit h3 {
   font: 300 30px/150% 'Open Sans', Helvetica, sans-serif !important;
@@ -194,6 +218,12 @@ body footer .footer-info {
   font: 400 14px/150% 'Open Sans', Helvetica, sans-serif !important;
   color: #898989 !important;
   padding: 20px 0;
+}
+@media (max-width: 768px) {
+  body footer .footer-info {
+    font-size: 10px !important;
+    padding: 10px 0;
+  }
 }
 body footer .footer-info a {
   margin: 0 10px 0 0;
