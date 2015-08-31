@@ -9,6 +9,12 @@
 @info-grey: #898989;
 @footer-black: #000000;
 
+
+/*----------Bootstrap Media Queries ----------*/
+@col-xs: 768px;
+@col-sm: 992px;
+@col-md: 1200px;
+
 /*----------Mixins----------*/
 
 .font-style(@size,@weight,@color){
@@ -35,12 +41,29 @@ body{
 
 		.ubif-logo{
 			height: 28px;
+
+			@media (max-width: 460px) {
+					height:auto;
+					width: 100%;
+			}
 		}
 
-		.request-info{
-			background-color: @ubif-red;
-			color: @font-white;
-			max-width: 110px;
+		.pull-right{
+
+			.request-info{
+				background-color: @ubif-red;
+				color: @font-white;
+				max-width: 110px;
+
+				@media (max-width: 460px) {
+					margin: 10px 0;
+				}
+			}
+
+			@media (max-width: 460px) {
+				float: left !important;
+			}
+
 		}
 
 		.cta-title{
@@ -48,6 +71,15 @@ body{
 
 			& + p{
 				margin: 0 0 40px 0;
+
+				@media (max-width: @col-xs) {
+					margin: 0 0 20px 0;
+				}
+			}
+
+			@media (max-width: @col-xs) {
+				font-size: 26px !important;
+				margin: 0;
 			}
 		}
 	}
@@ -57,17 +89,28 @@ body{
 		height: 220px;
 		z-index: 1;
 
-		.col-md-10{
+		.col-sm-10{
 			color:@font-white;
 			padding:25px 0 45px 13%;
 
 			h3{
 				.font-style(30,300,@font-white);
+
+				@media (min-width: 460px) and (max-width: 926px) {
+					font-size: 24px !important;
+				}
+				@media (max-width: 459px) {
+					font-size: 22px !important;
+				}
 			}
 
 			p{
 				padding:0 13% 0 0;
 			}
+		}
+
+		@media (max-width: @col-xs) {
+			height:auto;
 		}
 	}
 
@@ -75,7 +118,7 @@ body{
 		background-color: @background-white;
 		height: 220px;
 
-		.col-md-10{
+		.col-sm-10{
 			padding:18px 0 24px 0;
 
 			h3{
@@ -95,8 +138,8 @@ body{
 
 		.broken-phone{
 			position: absolute;
-			right: 105%;
-			width: 26%;
+			right: 104%;
+			width: 150px;
 		}
 	}
 
@@ -105,6 +148,7 @@ body{
 
 		.phone-users{
 			background-color: @font-white;
+			height: 62px;
 			padding: 20px 0;
 
 			small{
@@ -117,32 +161,71 @@ body{
 		      rgba(0, 0, 0, 0.65), 
 		      rgba(0, 0, 0, 0.65)
     		), url(../assets/images/store.jpg) no-repeat center -180px fixed;
+    		padding: 35px 0 100px 0;
 
 			h3{
 				.font-style(30,300,@background-white);
-				margin: 35px 0 35px 0;
+				margin: 0 0 35px 0;
+
+				@media (max-width: @col-xs) {
+					font-size: 26px !important;
+				}
 			}
 
 			form{
 				background-color: @background-white;
 				padding: 30px 10px;
-				margin: 0 0 100px 0;
 
-				.col-md-12,.col-md-6{
+				.col-sm-12,.col-sm-6{
 					margin: 0 0 20px 0;
+
+					.form-control:focus{
+						border-color: @ubif-red !important;
+						box-shadow: inset 0 1px 1px rgba(0,0,0,.025), 0 0 4px @ubif-red !important;
+					}
 				}
 
-				button{
-					background-color: @ubif-red;
+				.form-submit{
+					padding: 0 15px;
+					button{
+						background-color: @ubif-red;
+						color: @font-white;
+						width: 100%;
+					}
+				}
+			}
+
+			.post-submit{
+
+				h3{
+					.font-style(30,300,@background-white);
+					margin: 0 0 30px 0;
+
+					@media (max-width: @col-xs) {
+						font-size: 22px !important;
+					}
+				}
+
+				p{
 					color: @font-white;
-					margin: 0 15px;
-					width: 100%;
+				}
+
+				.visit-ubif{
+					background-color: @ubif-red;
+					display: inline-block;
+					float: none;
+					border:none;
+					color: @font-white;
+
+					@media (max-width: 460px) {
+						margin: 10px 0;
+					}
 				}
 			}
 		}
 	}
 
-	.footer{
+	footer{
 		background-color: @footer-black;
 		height: auto;
 		padding: 10px 0;
@@ -150,6 +233,17 @@ body{
 		.footer-info{
 			.font-style(14,400,@info-grey);
 			padding: 20px 0;
+
+			a{
+				margin:0 10px 0 0;
+				padding: 0 0 0 10px;
+				border-left: 2px solid @info-grey;
+				color: @info-grey;
+
+				&:hover{
+					color: @info-grey;
+				}
+			}
 		}
 
 		.footer-disclaimer{

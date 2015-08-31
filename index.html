@@ -23,14 +23,14 @@
 	            <img class="col-lg-4 pull-left ubif-logo" src="assets/images/UBIF_Franchising_Logo.svg"  alt="UBREAKIFIX | Franchising">
 
 	            <div class="col-lg-4 pull-right">
-	            	<a href="#" class="col-lg-7 col-lg-offset-5 btn btn-default request-info">Request Info</a>
+	            	<a href="#getStarted" class="col-lg-7 col-lg-offset-5 btn btn-default request-info">Request Info</a>
 	           	</div>
 	        </div>
 	    </div>
 
 	    <div class="row">
-	        <div class="col-md-12">
-	            <div class="col-md-6 col-md-offset-3">
+	        <div class="col-sm-12">
+	            <div class="col-sm-6 col-sm-offset-3">
 	                <h3 class="cta-title text-center">
 	                	First, A Little History
 	                </h3>
@@ -41,9 +41,9 @@
 	        </div>
 	    </div>
 
-	    <div class="container-fluid thesis-section col-md-6">
-	        <div class="col-md-10 col-md-offset-1">
-	            <h3 class="">
+	    <div class="container-fluid thesis-section col-sm-6">
+	        <div class="col-sm-10 col-sm-offset-1">
+	            <h3>
 	                Why Franchise With Us?
 	            </h3>
 	            <p>
@@ -52,13 +52,13 @@
 	        </div>
 	    </div>
 
-	    <div class="container-fluid col-md-6 numbers-section hidden-sm">
-	        <div class="col-md-10 col-md-offset-1 text-center">
+	    <div class="container-fluid col-sm-6 numbers-section hidden-xs">
+	        <div class="col-sm-10 col-sm-offset-1 text-center">
 	         <img class="broken-phone" src="assets/images/phone.png"  alt="Broken Iphone 6">
 	            <h3>
 	                The Numbers
 	            </h3>
-	            <div class="col-md-6">
+	            <div class="col-sm-6">
 	                <h2>
 	                	$000k
 	                </h2>
@@ -66,7 +66,7 @@
 	                	Annual Average
 	                </small>
 	            </div>
-	            <div class="col-md-6">
+	            <div class="col-sm-6">
 	                <h2>
 	                    $000k
 	                </h2>
@@ -78,97 +78,113 @@
 	    </div>
 
 	    <div class="container-fluid">
-	    	<div class="col-md-12 text-center phone-users">
+	    	<div class="col-sm-12 text-center phone-users hidden-xs">
 				196 Million Projected Smartphone Users in the United States by 2016 <small>* Via Statista</small> 
 	    	</div>
 
-	    	<div class="col-md-12 contact-form">
-	    		<h3 class="col-md-12 text-center">
+	    	<div class="col-sm-12 contact-form" id="getStarted">
+	    		<h3 class="col-sm-12 text-center">
 	    			Let's Get Started
 	    		</h3>
-			    <div class="col-md-4 col-md-offset-4">
+			    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 					<form>
 						<div class="form-group">
-							<div class="col-md-6">
+							<div class="col-sm-6">
 								<input type="text" class="form-control" placeholder="First Name">
 							</div>
-							<div class="col-md-6">
+							<div class="col-sm-6">
 								<input type="text" class="form-control" placeholder="Last Name">
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-md-12">
+							<div class="col-sm-12">
 								<input type="email" class="form-control" placeholder="E-mail">
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-md-12">
+							<div class="col-sm-12">
 								<input type="text" class="form-control" placeholder="Phone">
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-md-12">
-								<select class="form-control" id="sel2">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-								</select>
+							<div class="col-sm-12">
+								<select class="form-control bfh-countries" data-country="US"></select>
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-md-12">
+							<div class="col-sm-12">
 								<input type="text" class="form-control" placeholder="Address 1">
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-md-12">
+							<div class="col-sm-12">
 								<input type="text" class="form-control" placeholder="Address 2">
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-md-12">
+							<div class="col-sm-12">
 								<input type="text" class="form-control" placeholder="City">
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-md-6">
-								<select class="form-control" id="sel2">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-								</select>
+							<div class="col-sm-6">
+								<select class="form-control bfh-states" data-country="US" data-state="FL"></select>
 							</div>
-							<div class="col-md-6">
+							<div class="col-sm-6">
 								<input type="text" class="form-control" placeholder="Zip">
 							</div>
 						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
+						<div class="form-submit">
+							<button type="submit" class="btn btn-default">Submit</button>
+						</div>
 					</form>
 				</div>
-			</div>
 
-			<div class="col-md-12" style="display:none;">
-	    		<div class="col-md-12 text-center">
-	    			Thank You
-	    		</div>
-			    <div class="col-md-4 col-md-offset-4">
-					
-				</div>
+				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 hidden">
+					<div class="post-submit">
+		                <h3 class="thanks-title text-center">
+		                	Thank You for Your Interest!
+		                </h3>
+		                <p>
+		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		                </p>
+		                <div class="text-center">
+		               		<a target="_blank" href="https://www.ubreakifix.com/" class="btn btn-default visit-ubif">Visit uBreakiFix.com</a>
+		                </div>
+		            </div>
+	            </div>
 			</div>
-
 		</div>
 
-	    <div class="footer">
-	        <div class="col-lg-12 text-center">
-	            <p class="footer-info">&copy; 2015  uBreakiFix   |   200 South Orange Avenue, Orlando, Florida 32801     |     Privacy     |     Terms     |     Sitemap</p>
-	            <div class="clearfix"></div>
-	            <p class="footer-disclaimer">iPhone, iPod, iPad and Mac are registered trademarks of Apple, Inc. uBreakiFix is an independent service company and is in no way affiliated with Apple Inc.</p>
-	        </div>
-	    </div>
+	    <footer>
+	        <div class="text-center">
+	            <p class="footer-info">
+	            	&copy; 2015  uBreakiFix &nbsp;
 
-		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		            <a target="_blank" href="http://goo.gl/7QXhhp">
+		            	200 South Orange Avenue, Orlando, Florida 32801
+		            </a>
+	            	<a target="_blank" href="https://www.ubreakifix.com/privacy-policy">
+	            		Privacy
+	            	</a>
+	            	<a target="_blank" href="https://www.ubreakifix.com/terms-conditions">
+	            		Terms
+	            	</a>
+	            	<a target="_blank" href="https://www.ubreakifix.com/sitemap">
+	            		Sitemap
+	            	</a>
+	            </p>
+
+	            <div class="clearfix"></div>
+
+	            <p class="footer-disclaimer hidden-xs">
+	            	iPhone, iPod, iPad and Mac are registered trademarks of Apple, Inc. uBreakiFix is an independent service company and is in no way affiliated with Apple Inc.
+	            </p>
+	        </div>
+	    </footer>
+
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.js"></script>
 		<script src="js/main.js"></script>
 
 	</body>

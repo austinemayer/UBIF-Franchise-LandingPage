@@ -1,4 +1,5 @@
 /*----------Color Variables----------*/
+/*----------Bootstrap Media Queries ----------*/
 /*----------Mixins----------*/
 /*----------Element Styles----------*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
@@ -16,10 +17,26 @@ body .row {
 body .row .ubif-logo {
   height: 28px;
 }
-body .row .request-info {
+@media (max-width: 460px) {
+  body .row .ubif-logo {
+    height: auto;
+    width: 100%;
+  }
+}
+body .row .pull-right .request-info {
   background-color: #da291c;
   color: #ffffff;
   max-width: 110px;
+}
+@media (max-width: 460px) {
+  body .row .pull-right .request-info {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 460px) {
+  body .row .pull-right {
+    float: left !important;
+  }
 }
 body .row .cta-title {
   font: 300 32px/150% 'Open Sans', Helvetica, sans-serif !important;
@@ -28,53 +45,80 @@ body .row .cta-title {
 body .row .cta-title + p {
   margin: 0 0 40px 0;
 }
+@media (max-width: 768px) {
+  body .row .cta-title + p {
+    margin: 0 0 20px 0;
+  }
+}
+@media (max-width: 768px) {
+  body .row .cta-title {
+    font-size: 26px !important;
+    margin: 0;
+  }
+}
 body .thesis-section {
   background-color: #da291c;
   height: 220px;
   z-index: 1;
 }
-body .thesis-section .col-md-10 {
+body .thesis-section .col-sm-10 {
   color: #ffffff;
   padding: 25px 0 45px 13%;
 }
-body .thesis-section .col-md-10 h3 {
+body .thesis-section .col-sm-10 h3 {
   font: 300 30px/150% 'Open Sans', Helvetica, sans-serif !important;
   color: #ffffff !important;
 }
-body .thesis-section .col-md-10 p {
+@media (min-width: 460px) and (max-width: 926px) {
+  body .thesis-section .col-sm-10 h3 {
+    font-size: 24px !important;
+  }
+}
+@media (max-width: 459px) {
+  body .thesis-section .col-sm-10 h3 {
+    font-size: 22px !important;
+  }
+}
+body .thesis-section .col-sm-10 p {
   padding: 0 13% 0 0;
+}
+@media (max-width: 768px) {
+  body .thesis-section {
+    height: auto;
+  }
 }
 body .numbers-section {
   background-color: #eeeeee;
   height: 220px;
 }
-body .numbers-section .col-md-10 {
+body .numbers-section .col-sm-10 {
   padding: 18px 0 24px 0;
 }
-body .numbers-section .col-md-10 h3 {
+body .numbers-section .col-sm-10 h3 {
   font: 800 38px/150% 'Open Sans', Helvetica, sans-serif !important;
   color: #363636 !important;
 }
-body .numbers-section .col-md-10 h2 {
+body .numbers-section .col-sm-10 h2 {
   font: 800 48px/150% 'Open Sans', Helvetica, sans-serif !important;
   color: #da291c !important;
   line-height: 100% !important;
   margin-bottom: 0;
 }
-body .numbers-section .col-md-10 small {
+body .numbers-section .col-sm-10 small {
   font: 400 12px/150% 'Open Sans', Helvetica, sans-serif !important;
   color: #363636 !important;
 }
 body .numbers-section .broken-phone {
   position: absolute;
-  right: 105%;
-  width: 26%;
+  right: 104%;
+  width: 150px;
 }
 body .container-fluid {
   padding: 0;
 }
 body .container-fluid .phone-users {
   background-color: #ffffff;
+  height: 62px;
   padding: 20px 0;
 }
 body .container-fluid .phone-users small {
@@ -83,38 +127,84 @@ body .container-fluid .phone-users small {
 body .container-fluid .contact-form {
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/images/store.jpg) no-repeat center -180px fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/images/store.jpg) no-repeat center -180px fixed;
+  padding: 35px 0 100px 0;
 }
 body .container-fluid .contact-form h3 {
   font: 300 30px/150% 'Open Sans', Helvetica, sans-serif !important;
   color: #eeeeee !important;
-  margin: 35px 0 35px 0;
+  margin: 0 0 35px 0;
+}
+@media (max-width: 768px) {
+  body .container-fluid .contact-form h3 {
+    font-size: 26px !important;
+  }
 }
 body .container-fluid .contact-form form {
   background-color: #eeeeee;
   padding: 30px 10px;
-  margin: 0 0 100px 0;
 }
-body .container-fluid .contact-form form .col-md-12,
-body .container-fluid .contact-form form .col-md-6 {
+body .container-fluid .contact-form form .col-sm-12,
+body .container-fluid .contact-form form .col-sm-6 {
   margin: 0 0 20px 0;
 }
-body .container-fluid .contact-form form button {
+body .container-fluid .contact-form form .col-sm-12 .form-control:focus,
+body .container-fluid .contact-form form .col-sm-6 .form-control:focus {
+  border-color: #da291c !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.025), 0 0 4px #da291c !important;
+}
+body .container-fluid .contact-form form .form-submit {
+  padding: 0 15px;
+}
+body .container-fluid .contact-form form .form-submit button {
   background-color: #da291c;
   color: #ffffff;
-  margin: 0 15px;
   width: 100%;
 }
-body .footer {
+body .container-fluid .contact-form .post-submit h3 {
+  font: 300 30px/150% 'Open Sans', Helvetica, sans-serif !important;
+  color: #eeeeee !important;
+  margin: 0 0 30px 0;
+}
+@media (max-width: 768px) {
+  body .container-fluid .contact-form .post-submit h3 {
+    font-size: 22px !important;
+  }
+}
+body .container-fluid .contact-form .post-submit p {
+  color: #ffffff;
+}
+body .container-fluid .contact-form .post-submit .visit-ubif {
+  background-color: #da291c;
+  display: inline-block;
+  float: none;
+  border: none;
+  color: #ffffff;
+}
+@media (max-width: 460px) {
+  body .container-fluid .contact-form .post-submit .visit-ubif {
+    margin: 10px 0;
+  }
+}
+body footer {
   background-color: #000000;
   height: auto;
   padding: 10px 0;
 }
-body .footer .footer-info {
+body footer .footer-info {
   font: 400 14px/150% 'Open Sans', Helvetica, sans-serif !important;
   color: #898989 !important;
   padding: 20px 0;
 }
-body .footer .footer-disclaimer {
+body footer .footer-info a {
+  margin: 0 10px 0 0;
+  padding: 0 0 0 10px;
+  border-left: 2px solid #898989;
+  color: #898989;
+}
+body footer .footer-info a:hover {
+  color: #898989;
+}
+body footer .footer-disclaimer {
   font: 400 12px/150% 'Open Sans', Helvetica, sans-serif !important;
   color: #464646 !important;
 }
